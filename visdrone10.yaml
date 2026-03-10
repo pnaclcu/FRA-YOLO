@@ -1,0 +1,10 @@
+# visdrone.yaml
+path: ./visdrone10
+train: images/train
+val: images/val
+test: images/test
+
+# 10 classes
+nc: 10
+names: ['pedestrian', 'people', 'bicycle', 'car', 'van',
+        'truck', 'tricycle', 'awning-tricycle', 'bus', 'motor']
