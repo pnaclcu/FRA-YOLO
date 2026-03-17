@@ -64,6 +64,9 @@ You can just run eval.py to get the map@50.
 python eval.py
 ``
 
+### 4.4 Modified dataset
+It will be available after the paper is accepted.
+
 ## 5 Acknowledgment
 This repo is built upon [ultralytics](https://github.com/ultralytics/ultralytics). 
 We do appreciate the authors for their great works.

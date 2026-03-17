@@ -3,12 +3,14 @@ from swanlab.integration.ultralytics import add_swanlab_callback
 
 model = YOLO('yolov8m-fra.yaml')
 
-add_swanlab_callback(
-    model,
-    project="ultralytics",
-    experiment_name="FRA-YOLO",
-    description="yolov8m on visdrone",
-)
+# add_swanlab_callback(
+#     model,
+#     project="ultralytics",
+#     experiment_name="FRA-YOLO",
+#     description="yolov8m on visdrone",
+#
+#
+# )
 train_results = model.train(
     data="visdrone10.yaml",  # Path to dataset configuration file
     epochs=350,  # Number of training epochs
@@ -19,4 +21,6 @@ train_results = model.train(
     amp = False,
 )
 metrics = model.val()
+
+
 
