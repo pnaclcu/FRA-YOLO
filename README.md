@@ -48,7 +48,7 @@ See details in `./ckpts/README.md` file.
 ````
 
 
-## 4. Usage for FRA-YOLO youselves
+## 4. Usage for training FRA-YOLO yourselves
 ### 4.1 Training stage: Modify the ```dataset.yaml``` and run 
 ``
 python train.py
