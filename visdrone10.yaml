@@ -1,4 +1,4 @@
-# visdrone.yaml
+# Using this file if VisDrone is already downloaded and unzipped locally.
 path: ./visdrone10
 train: images/train
 val: images/val
