@@ -27,8 +27,8 @@ CLICK HERE [![](https://raw.githubusercontent.com/SwanHubX/assets/main/badge1.sv
 ### 3.1 Accessable links
 ```
 You can download the pretrained models from 
-1.[Google Drive] Coming soon.
-2.[Baidu Yun] 链接: https://pan.baidu.com/s/1PctOf1t-BrcppLnoTBPDFg?pwd=fra1 提取码: fra1
+1.[Google Drive] https://drive.google.com/drive/folders/19a7frGDU1pSsKYAeixKhDeYRCaBhXSiS?usp=sharing
+2.[Baidu Yun]    https://pan.baidu.com/s/1PctOf1t-BrcppLnoTBPDFg?pwd=fra1 password: fra1
 
 ```
 ### 3.2 Put the downloaded .pt files into `./ckpts` and run 
