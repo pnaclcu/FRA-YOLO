@@ -4,7 +4,7 @@ import os, torch
 # torch.backends.cuda.matmul.allow_tf32 = False
 
 dataset_type = './t_drone_person' # dataset type
-epochs = [81,83,84]
+epochs = [81]
 paths = ['./runs/detect/train{}/weights/best.pt'.format(e) for e in epochs] # model path
 test_set = False
 device = '0'
