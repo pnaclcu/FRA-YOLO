@@ -1649,7 +1649,7 @@ def parse_model(d, ch, verbose=True):
                     n = 1
                 if m is C3k2:  # for M/L/X sizes
                     legacy = False
-                    if scale in "mlx":
+                    if scale in "lx":
                         args[3] = True
                 if m is A2C2f:
                     legacy = False

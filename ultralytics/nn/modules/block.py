@@ -495,6 +495,7 @@ class C2f(nn.Module):
     """Faster Implementation of CSP Bottleneck with 2 convolutions."""
 
     def __init__(self, c1: int, c2: int, n: int = 1, shortcut: bool = False, parser_size : int = 160, g: int = 1, e: float = 0.5):
+  # def __init__(self, c1: int, c2: int, n: int = 1, c3k: bool = False, e: float = 0.5, g: int = 1, shortcut: bool = True):
         """
         Initialize a CSP bottleneck with 2 convolutions.
 
@@ -1317,7 +1318,7 @@ class C3k2(C2f):
     """Faster Implementation of CSP Bottleneck with 2 convolutions."""
 
     def __init__(
-        self, c1: int, c2: int, n: int = 1, c3k: bool = False, e: float = 0.5, g: int = 1, shortcut: bool = True
+        self, c1: int, c2: int, n: int = 1, c3k: bool = False, parser_size: int = 160, e: float = 0.5, g: int = 1, shortcut: bool = True
     ):
         """
         Initialize C3k2 module.
@@ -1331,9 +1332,9 @@ class C3k2(C2f):
             g (int): Groups for convolutions.
             shortcut (bool): Whether to use shortcut connections.
         """
-        super().__init__(c1, c2, n, shortcut, g, e)
+        super().__init__(c1, c2, n, shortcut, parser_size ,g, e)
         self.m = nn.ModuleList(
-            C3k(self.c, self.c, 2, shortcut, g) if c3k else Bottleneck(self.c, self.c, shortcut, g) for _ in range(n)
+            C3k(self.c, self.c, 2, shortcut, g) if c3k else Bottleneck(self.c, self.c, shortcut, g, k=((3, 3), (3, 3)), e=1.0) for _ in range(n)
         )
 
 
