@@ -67,7 +67,26 @@ python eval.py
 ``
 
 ### 4.4 Modified training dataset of VisDrone2019-DET
-It will be available after the paper is accepted.
+
+We conducted a manual review and corrected over 10,000 instances within the VisDrone training set.
+We categorized and rectified four primary types of annotation errors:
+
+1. **Missed Annotations (Red Boxes):** Small objects or instances located in the corners of images were frequently ignored by the original annotators.
+2. **False Annotations (Blue Boxes):** Category misclassifications were common. For instance, VisDrone strictly distinguishes "pedestrians" (standing/walking) from "people" (other postures, e.g., riders), yet many "people" were erroneously labeled as "pedestrians."
+3. **Inconsistent Annotations (Yellow Boxes):** Annotations lacked spatial and temporal consistency. For example, in consecutive frames or similar viewpoints, distant vehicles in a parking lot were annotated while closer, more prominent vehicles were omitted.
+4. **Ambiguous Annotation Criteria:** Distant cars (especially SUVs) were often misclassified as "van" due to width-height imbalanced compression in oblique views. We thoroughly investigated the visual characteristics of these edge cases and established unified criteria to re-label them.
+
+<div align="center">
+  <img src="Figs/annotations.png" width="700" alt="Modified Annotation"/>
+  <p>Modified Annotation</p>
+</div>
+
+Please note that the cleaned training set was specifically utilized in the Discussion section:
+
+1. **We did not modify the validation and test sets of VisDrone2019-DET** to ensure a strictly fair comparison with SOTA methods
+2. **In all comprative experiments, All MODELS were trained using the original, unmodified training annotations** and evaluated on the same test set. 
+
+The new annotations of VisDrone2019-DET will be available after the paper is accepted.
 
 ## 5 Acknowledgment
 This repo is built upon [ultralytics](https://github.com/ultralytics/ultralytics). 
