@@ -4,7 +4,7 @@ from ultralytics import YOLO
 
 def parse_args():
     parser = argparse.ArgumentParser(description='FRA-YOLO Training Script')
-    parser.add_argument('--model', type=str, default='yolov8-fra.yaml',
+    parser.add_argument('--model', type=str, default='yolov8m-fra.yaml',
                         help='Path to model configuration file')
     parser.add_argument('--data', type=str, default='VisDrone.yaml',
                         help='Path to dataset configuration file')
