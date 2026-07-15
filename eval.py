@@ -17,6 +17,7 @@ for path in paths:
         metrics = model.val(data="{}.yaml".format(dataset_type), imgsz=640, batch=8, conf=0.001, iou=0.5, device=device, save=True,
                             show_boxes=True, split="test")
         print('mAP#@75 = {}'.format(metrics.box.map75))
+    print ("*"*50)
 
 
 
